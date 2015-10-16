@@ -1,0 +1,82 @@
+
+@mixin links($color, $textDecoration)
+	a:link
+		color: $color
+		text-decoration: $textDecoration
+	a:visited
+		color: $color
+		text-decoration: $textDecoration
+	a:hover
+		color: $color
+		text-decoration: $textDecoration
+	a:active
+		color: $color
+		text-decoration: $textDecoration
+
+@mixin borderRadius($corner, $radius)
+	@if $corner != all
+		-moz-border-#{$corner}-radius: $radius 
+		-webkit-border-#{$corner}-radius: $radius 
+		border-#{$corner}-radius: $radius 
+	@else
+		-moz-border-radius: $radius
+		-webkit-border-radius: $radius
+		border-radius: $radius 
+
+@mixin boxShadow($top, $left, $blur, $color) 
+	-webkit-box-shadow: $top $left $blur $color
+	-moz-box-shadow: $top $left $blur $color
+	box-shadow: $top $left $blur $color
+
+@mixin gradient($topColor, $percentChange, $direction)
+	@if $direction == out
+		background: -webkit-gradient(linear, left top, left bottom, from($topColor), to(darken($topColor, $percentChange)))
+		background: -moz-linear-gradient(top, $topColor, darken($topColor, $percentChange))
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$topColor}, endColorstr=#{darken($topColor, $percentChange)})
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$topColor}, endColorstr=#{darken($topColor, $percentChange)})"
+	@if $direction == in
+		background: -webkit-gradient(linear, left top, left bottom, from($topColor), to(lighten($topColor, $percentChange)))
+		background: -moz-linear-gradient(top, $topColor, lighten($topColor, $percentChange))
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$topColor}, endColorstr=#{lighten($topColor, $percentChange)})
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$topColor}, endColorstr=#{lighten($topColor, $percentChange)})"
+
+@mixin flipContainer
+	-webkit-perspective: 800px
+	-moz-perspective: 800px
+	-o-perspective: 800px
+	perspective: 800px
+
+@mixin flipElement
+	-webkit-transition: -webkit-transform 1s
+	-moz-transition: -moz-transform 1s
+	-o-transition: -o-transform 1s
+	transition: transform 1s
+	-webkit-transform-style: preserve-3d
+	-moz-transform-style: preserve-3d
+	-o-transform-style: preserve-3d
+	transform-style: preserve-3d
+	-webkit-transform-origin: right center
+	-moz-transform-origin: right center
+	-o-transform-origin: right center
+	transform-origin: right center
+	&.flipped
+		-webkit-transform: translateX( -100% ) rotateY( -180deg )
+		-moz-transform: translateX( -100% ) rotateY( -180deg )
+		-o-transform: translateX( -100% ) rotateY( -180deg )
+		transform: translateX( -100% ) rotateY( -180deg )
+
+@mixin flipSide
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+	-o-backface-visibility: hidden
+	backface-visibility: hidden		
+
+@mixin flipBack
+	-webkit-transform: rotateY( 180deg )
+	-moz-transform: rotateY( 180deg )
+	-o-transform: rotateY( 180deg )
+	transform: rotateY( 180deg )
+
+
+
+

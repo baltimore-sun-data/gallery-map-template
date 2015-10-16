@@ -1,0 +1,263 @@
+/* Generic fix */
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+
+
+/* Ad */
+
+#leaderboard {
+  height: 90px;
+  width: 728px;
+  background-color: #222222;
+  margin: 20px auto;
+  text-align: center; }
+  @media (max-width: 730px) {
+    #leaderboard {
+      display: none; } }
+
+
+
+
+/* Tophat */
+
+#tophat {
+  height: 40px;
+  background-color: #282828;
+  overflow: hidden; }
+
+#logo {
+  width: 250px;
+  height: 100%;
+  float: left;
+  line-height: 43px;
+  vertical-align: middle; }
+  #logo img {
+    margin: 0 10px;
+    width: 90%; }
+  @media (max-width: 400px) {
+    #logo {
+      width: 200px; } }
+
+.tophat-share-tools {
+  float: right;
+  height: 100%;
+  line-height: 35px;
+  font-size: 24px;
+  vertical-align: middle;
+  color: white;
+  margin: 0 10px;
+  text-align: center; }
+  .tophat-share-tools span {
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 8px; }
+    .tophat-share-tools span:hover {
+      color: #DAA520; } /* Accent color */
+  @media (max-width: 760px) {
+    .tophat-share-tools {
+      font-size: 18px; } }
+
+
+
+
+/* Body */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 10000;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 100px 20px ;
+}
+#overlayText {
+  width:100%;
+  background-color: black;
+}
+.galleryMap {
+  width:100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.galleryMap__text--top {
+  padding: 7px;
+}
+.headline {
+    font-size: 32px;
+    line-height: 32px;
+}
+.chatter {
+  font-family: 'Lato',sans-serif;
+  font-size: 12px;
+}
+.galleryMap__mapContainer {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.galleryMap__mapContainer:after {
+  padding-top: 42%;
+  /* 16:9 ratio */
+  display: block;
+  content: '';
+}
+#googft-mapCanvas  {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.galleryMap__nav {
+  text-align: center;
+  width: 100%;
+  margin-top: 4px;
+}
+.galleryMap__nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
+.galleryMap__nav__button{
+  margin: 5px 0;
+  width:10%;
+  padding: 5px;
+}
+#galleryMap__nav__button--next {
+  float:right;
+}
+#galleryMap__nav__button--prev {
+  float:left;
+}
+.galleryMap__nav__button--arrow {
+  font-size: 32px;
+  color: #666;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+.galleryMap__nav__button--arrow:hover {
+  color: #DAA520;
+}
+.galleryMap__navText {
+  float:left;
+  width:80%;
+}
+#subhead { 
+  font-family: 'Georgia',serif;
+  margin-top: 3px;
+  font-size: 20px;
+  width:100%;
+  text-align: center;
+}
+.galleryMap__image {
+  width:100%;
+}
+#image {
+  width:100%;
+}
+.galleryMap__cutline{
+  width:100%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #282828;
+  position: relative;
+  top: -10px;
+}
+#cutline {
+  font-family: 'Lato',sans-serif;
+  font-size: 12px;  
+  margin: 0 ;
+  color: #999;
+}
+.relatedContent {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  padding: 7px;
+}
+.relatedContent li {
+  margin: 4px 0 6px 17px;
+}
+.relatedContent li a {
+  color: #DAA520;
+  text-decoration: none;
+}
+.footer {
+  margin-top: 31px;
+  width: 100%;
+  background-color: #282828;
+  padding: 10px;
+  text-align: center;
+  vertical-align: baseline;
+}
+.footer__credits {
+  margin: 10px 30px auto;
+  vertical-align: top;
+  display: inline-block;
+}
+.footer__credits--title {
+  font-weight: bold;
+}
+.footer__credits li {
+  font-family: 'Lato',sans-serif;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+@media(min-width: 400px) {
+  .galleryMap__nav__button--arrow {
+    font-size: 44px;
+  }
+  .headline {
+    font-size: 38px;
+    line-height: 38px;
+    margin: 15px 0;
+  }
+  #subhead {
+    font-size: 24px;
+    width: 
+  }
+  #cutline, .chatter, .footer__credits li{
+    font-size: 14px;
+  }
+}
+@media (min-width: 600px) {
+  .headline {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+/* Clearfix */
+
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+
+* html .group {
+  zoom: 1; }
+
+*:first-child + html .group {
+  zoom: 1; }

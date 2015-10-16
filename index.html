@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Gallery-Map Template</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <!-- Javascript
+    ================================================== -->
+    <!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+    <![endif]-->
+    <!-- <script src="scripts/modernizr.js"> </script> -->
+    <script language="javascript" src="scripts/jquery-1.10.2.min.js"> </script>
+    <script language="javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;v=3"></script>
+    <!-- Fonts
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Facebook Stuff -->
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="fb:app_id" content="310302989040998">
+    <!-- /Facebook Stuff -->
+    <!-- Twitter Stuff -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@baltimoresun">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:domain" content="baltimoresun.com">
+    <!-- /Twitter Stuff -->
+    <!-- Baltimore Sun Ad Scripts -->
+    <!-- Start: GPT Async -->
+    <script type='text/javascript'>
+      var gptadslots=[];
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function(){ var gads = document.createElement('script');
+        gads.async = true; gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+    <script type="text/javascript">
+      googletag.cmd.push(function() {
+          //Adslot 1 declaration
+          gptadslots[1]= googletag.defineSlot('/4011/trb.baltimoresun', [[728,90]],'div-gpt-ad-529734999113274866-1').setTargeting('pos',['1']).addService(googletag.pubads());
+          googletag.pubads().setTargeting('ptype',['sf']);
+          googletag.pubads().enableAsyncRendering();
+          googletag.enableServices();
+        });
+    </script>
+    <!-- End: GPT -->
+    <!-- /Baltimore Sun Ad Scripts -->
+  </head>
+  <body>
+    <div id="tophat">
+      <div class="group"></div>
+      <div id="logo"><a href="http://www.baltimoresun.com"><img src="images/baltimore-sun-logo-white.png" border="0"></a></div>
+      <div class="tophat-share-tools"><span class="icon-facebook"></span><span class="icon-twitter"></span></div>
+    </div>
+    <div class="galleryMap">
+      <div class="galleryMap__text--top">
+        <h2 class="headline">Animals hang out in Baltimore</h2>
+        <p class="chatter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat dui et lorem imperdiet vestibulum. Aenean lacinia pellentesque neque eu venenatis. Donec faucibus mattis lacus.</p>
+      </div>
+      <div class="galleryMap__mapContainer">
+        <div class="googleMap" id="googft-mapCanvas"></div>
+      </div>
+      <div class="galleryMap__nav">
+        <div class="galleryMap__nav__button" id="galleryMap__nav__button--prev">
+          <span class="galleryMap__nav__button--arrow"><</span>
+        </div> 
+        <div class="galleryMap__navText"><h3 id="subhead"></h3></div>
+        <div class="galleryMap__nav__button" id="galleryMap__nav__button--next">
+          <span class="galleryMap__nav__button--arrow">></span>
+        </div> 
+      </div>
+      <div class="galleryMap__image">
+        <img id="image" src=""/>
+        <div class="galleryMap__cutline"><p id="cutline"></p></div>
+      </div>
+    </div>
+    <!-- Leaderboard Ad -->
+    <div id="leaderboard">
+      <!-- Beginning Async AdSlot 1 for Ad unit trb.baltimoresun  ### size: [[728,90]] -->
+      <!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
+      <div id='div-gpt-ad-529734999113274866-1'>
+        <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-529734999113274866-1'); });
+        </script>
+      </div>
+      <!-- End AdSlot 1 -->
+    </div>
+    <!-- /Leaderboard Ad -->
+    <div class="footer">
+      <ul class="footer__credits">
+        <li class="footer__credits--title">TITLE</li>
+        <li>NAME</li>
+        <li>NAME</li>
+      </ul>
+      <ul class="footer__credits">
+        <li class="footer__credits--title">Design & Development</li>
+        <li>Jin Kim</li>
+      </ul>
+    </div>
+    <!-- START OMNITURE // hive:metrics-tribune -->
+    <!-- SiteCatalyst code version: H.1.
+    Copyright 1997-2005 Omniture, Inc. More info available at
+    http://www.omniture.com -->
+    <script type="text/javascript">
+      var niceromn = {
+        pageName: "Gallery-Map Template",
+        prop38: "story",
+        eVar21: "story",
+      }
+      //Additions for compatability with LAT code.
+      var this_page_title = niceromn.pageName
+    </script>
+    <script src="scripts/update-omniture.js"></script>
+    <script type="text/javascript">adblock=true;</script>
+    <script type="text/javascript" src="http://www.baltimoresun.com/hive/javascripts/metrics/adframe.js"></script>
+    <script type="text/javascript" src="http://www.baltimoresun.com/hive/javascripts/metrics/s_code_trb.js"></script>
+    <script language="JavaScript">
+      s.pageName="Gallery-Map Template";        
+      s.prop38="story";
+      s.eVar21="story";          
+      s.server="data.baltimoresun.com"; 
+      s.channel="Baltimore Sun:news:maryland";
+      s.prop3="";
+      ( function(){
+        if( window.registration && window.registration.user && window.registration.user.isLoggedIn()){
+          s.prop28 = registration.getMetricsId();
+        } else if ( window.carnival ) {
+          var carnival_username_c_unm = readCookie('c_unm');
+          var carnival_masterid_c_mid = carnival.metrics.getMetricsId();
+          if( carnival_username_c_unm!=null && carnival_masterid_c_mid ){
+            s.prop28 = carnival_masterid_c_mid;
+          }
+        }
+        if( !s.prop28 ){
+          s.prop28 = ""; 
+        }
+      })();
+      s.prop32="";
+      s.prop36="Page 1";
+      /* Taxonomy Variables */
+      s.prop46="";
+      /* E-commerce Variables */
+      s.events=""; 
+      /* P2P blog variables */
+      s.prop52=s.pageName;
+      s.eVar20="Baltimore Sun";
+      s.hier1="Baltimore Sun:news:maryland"; 
+      s.hier2="news:maryland";
+      s.hier4="news:maryland";  
+      s.eVar42="";
+      s.prop44="";
+      if(adblock) {
+        s.prop54="ad blocking";
+      }
+      s.prop64="08/11/2015 15:56";
+      /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+      var s_code=s.t();if(s_code)document.write(s_code) 
+      -->  
+    </script>
+    <script language="JavaScript"><!--
+      if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+        //--></script><!--/DO NOT REMOVE/-->
+      <!-- End SiteCatalyst code version: H.1. -->
+      <!-- START REVENUE SCIENCE PIXELLING CODE -->
+    <script src="http://js.revsci.net/gateway/gw.js?csid=B08725"></script>
+    <script>
+      DM_addEncToLoc("Site", (s.server));
+      DM_addEncToLoc("channel", (s.channel));
+      DM_addEncToLoc("keyword", (s.prop3));
+      DM_cat(s.hier1);
+      DM_tag();
+    </script>
+    <!-- END REVENUE SCIENCE PIXELLING CODE -->
+    <script type="text/javascript">
+      (function() { 
+        var old = s.ot; 
+        s.ot = function(el) { 
+          return el.tagUrn ? '' : old(el); 
+        }; 
+      })(); 
+    </script>
+    <!-- START Nielsen Online SiteCensus V6.0 -->
+    <!-- COPYRIGHT 2010 Nielsen Online -->
+    <script type="text/javascript">
+      (function () {
+        var d = new Image(1, 1);
+        d.onerror = d.onload = function () {
+          d.onerror = d.onload = null;
+        };
+        d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-400338h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+      })();
+    </script>
+    <noscript>
+      <div>
+        <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-400338h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+        width="1" height="1" alt="" />
+      </div>
+    </noscript>
+    <!-- END Nielsen Online SiteCensus V6.0 -->
+    <script language="javascript" src="scripts/javascript.js"> </script>
+  </body>
+</html>
